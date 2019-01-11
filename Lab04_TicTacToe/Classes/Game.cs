@@ -6,6 +6,7 @@ namespace Lab04_TicTacToe.Classes
 {
 	class Game
 	{
+        //why do none of these have /// while player had some, am i supposed to add it
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
 		public Player Winner { get; set; }
@@ -28,8 +29,8 @@ namespace Lab04_TicTacToe.Classes
 		/// Activate the Play of the game
 		/// </summary>
 		/// <returns>Winner</returns>
-		public Player Play()
-		{
+		//public Player Play()
+		//{
 
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
@@ -47,7 +48,7 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-		}
+		//}
 
 
 		/// <summary>
