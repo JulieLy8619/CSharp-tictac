@@ -7,6 +7,7 @@ namespace Lab04_TicTacToe
     {
         static void Main(string[] args)
         {
+            //just testing object and its function
             Board ticTacBoard = new Board();
             ticTacBoard.DisplayBoard();
             Console.ReadLine(); //so it doesn't auto exit

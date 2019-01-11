@@ -6,7 +6,6 @@ namespace Lab04_TicTacToe.Classes
 {
     class Player
     {
-        //julie 011119 why did marker and isturn have /// but this one didn't
 		public string Name { get; set; }
 
 		/// <summary>
