@@ -6,6 +6,7 @@ namespace Lab04_TicTacToe.Classes
 {
     class Position
     {
+        //constructors
 		public int Row { get; set; }
 		public int Column { get; set; }
 
