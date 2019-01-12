@@ -47,8 +47,6 @@ namespace Lab04_TicTacToe.Classes
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
 
-            //need a loop to keep doing this until a winner or the board is full which then cats game
-
             Board.DisplayBoard();
             //Console.WriteLine("test print thing " + Board.GameBoard);
 
@@ -74,10 +72,14 @@ namespace Lab04_TicTacToe.Classes
             if (CheckForWinner(Board) == true && PlayerOne.IsTurn == false)
             {
                 Console.WriteLine("Player one wins");
+                Board.DisplayBoard();
+                return PlayerOne;
             }
             else if (CheckForWinner(Board) == true && PlayerTwo.IsTurn == false)
             {
                 Console.WriteLine("Player two wins");
+                Board.DisplayBoard();
+                return PlayerTwo;
             }
             else
             {
