@@ -30,7 +30,6 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
-            Board.DisplayBoard();
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
@@ -47,7 +46,30 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-            return null;
+
+            //need a loop to keep doing this until a winner or the board is full which then cats game
+                Board.DisplayBoard();
+            int counter = 0;
+            do
+            {
+                Console.WriteLine("# of turns: " + counter);
+                if (PlayerOne.IsTurn == true)
+                {
+                    PlayerOne.TakeTurn(Board);
+                    Board.DisplayBoard();
+                    SwitchPlayer();
+                    counter++;
+                }
+                else
+                {
+                    PlayerTwo.TakeTurn(Board);
+                    Board.DisplayBoard();
+                    SwitchPlayer();
+                    counter++;
+                }
+            } while (CheckForWinner(Board) == false || counter > 9);
+            Console.WriteLine("someone won or cats game");
+                return null;
 		}
 
 
@@ -84,20 +106,17 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-                //I need to change the strings to numbers so I can compare to the matrix
-                int aInt = Convert.ToInt32(a);
-                int bInt = Convert.ToInt32(b);
-                int cInt = Convert.ToInt32(c);
+                //Console.WriteLine($"========={i}===========");
+                Console.WriteLine($"{i}: a {a} b {b} c {c}");
+                //Console.WriteLine($"========={i}===========");
                 // TODO:  Determine a winner has been reached. 
                 // return true if a winner has been reached. 
-                //if (winners[i][0] == aInt && winners[i][1] == bInt && winners[i][2] == cInt)
+                //this works but my display isn't working right so I don't see it
                 if (a == b && b == c && c == a)
                 {
                     return true;
                 }
-			
 			}
-
 			return false;
 		}
 

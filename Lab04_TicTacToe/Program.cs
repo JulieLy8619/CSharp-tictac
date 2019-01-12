@@ -17,7 +17,7 @@ namespace Lab04_TicTacToe
                 Console.WriteLine("2: Exit");
 
                 string userChoice = Console.ReadLine();
-                int userChoiceInt = Convert.ToInt32(userChoice);
+                int userChoiceInt = Convert.ToInt32(userChoice); //need to add exception handler for no response
 
                 if (userChoiceInt > 2)
                 {
@@ -34,7 +34,6 @@ namespace Lab04_TicTacToe
                     switch (userChoiceInt)
                     {
                         case 1: //Start
-                            //Console.WriteLine("just for testing, in option 1");
                             //set up players
                             Player playerOne = new Player();
                             Player playerTwo = new Player();
@@ -56,8 +55,10 @@ namespace Lab04_TicTacToe
                             playerOne.IsTurn = true;
                             playerTwo.IsTurn = false;
 
+                            Console.WriteLine(); //just because I like space
                             Console.WriteLine($"Hello {playerOne.Name}, you are {playerOne.Marker} and it is your turn first");
-                            Console.WriteLine($"Hello {playerTwo.Name}, therefore you are   {playerTwo.Marker}");
+                            Console.WriteLine($"Hello {playerTwo.Name}, you are {playerTwo.Marker}");
+                            Console.WriteLine(); //just because I like space
 
                             //call game.play
                             Game newGame = new Game(playerOne, playerTwo);
@@ -66,7 +67,6 @@ namespace Lab04_TicTacToe
                             loopMenu = false; //to exit do while loop
                             break;
                         default: // exit
-                            Console.WriteLine("just for testing, in option 2");
                             loopMenu = false; //to exit do while loop
                             Console.ReadLine();
                             Environment.Exit(0);
@@ -74,11 +74,6 @@ namespace Lab04_TicTacToe
                     }
                 }
             } while (loopMenu == true);
-
-
-            //just testing object and its function
-            //Board ticTacBoard = new Board();
-            //ticTacBoard.DisplayBoard();
             Console.ReadLine(); //so it doesn't auto exit
         }
     }

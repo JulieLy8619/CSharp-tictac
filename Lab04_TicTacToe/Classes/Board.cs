@@ -17,7 +17,7 @@ namespace Lab04_TicTacToe.Classes
 		};
 
         /// <summary>
-        /// 
+        /// Prints the board to the screen
         /// </summary>
 		public void DisplayBoard()
 		{
@@ -32,7 +32,7 @@ namespace Lab04_TicTacToe.Classes
                 }
                 Console.WriteLine();
             }
-		
-		}
+            Console.WriteLine(); // because I like space
+        }
 	}
 }
