@@ -48,7 +48,10 @@ namespace Lab04_TicTacToe.Classes
              */
 
             //need a loop to keep doing this until a winner or the board is full which then cats game
-                Board.DisplayBoard();
+
+            Board.DisplayBoard();
+            //Console.WriteLine("test print thing " + Board.GameBoard);
+
             int counter = 0;
             do
             {
@@ -67,8 +70,8 @@ namespace Lab04_TicTacToe.Classes
                     SwitchPlayer();
                     counter++;
                 }
-            } while (CheckForWinner(Board) == false || counter > 9);
-            Console.WriteLine("someone won or cats game");
+            } while (CheckForWinner(Board) == false || counter > 10); //10 because could win on 9th move
+            Console.WriteLine("cats game");
                 return null;
 		}
 
@@ -106,9 +109,7 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-                //Console.WriteLine($"========={i}===========");
-                Console.WriteLine($"{i}: a {a} b {b} c {c}");
-                //Console.WriteLine($"========={i}===========");
+                //Console.WriteLine($"{i}: a {a} b {b} c {c}");
                 // TODO:  Determine a winner has been reached. 
                 // return true if a winner has been reached. 
                 //this works but my display isn't working right so I don't see it
