@@ -70,8 +70,19 @@ namespace Lab04_TicTacToe.Classes
                     SwitchPlayer();
                     counter++;
                 }
-            } while (CheckForWinner(Board) == false || counter > 10); //10 because could win on 9th move
-            Console.WriteLine("cats game");
+            } while (counter < 9 && CheckForWinner(Board) == false); 
+            if (CheckForWinner(Board) == true && PlayerOne.IsTurn == false)
+            {
+                Console.WriteLine("Player one wins");
+            }
+            else if (CheckForWinner(Board) == true && PlayerTwo.IsTurn == false)
+            {
+                Console.WriteLine("Player two wins");
+            }
+            else
+            {
+                Console.WriteLine("cats game");
+            }
                 return null;
 		}
 
@@ -112,7 +123,6 @@ namespace Lab04_TicTacToe.Classes
                 //Console.WriteLine($"{i}: a {a} b {b} c {c}");
                 // TODO:  Determine a winner has been reached. 
                 // return true if a winner has been reached. 
-                //this works but my display isn't working right so I don't see it
                 if (a == b && b == c && c == a)
                 {
                     return true;

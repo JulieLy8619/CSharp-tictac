@@ -23,14 +23,10 @@ namespace Lab04_TicTacToe.Classes
 		{
 
             //TODO: Output the board to the console
-            // I know it is a 3x3 board and will change it to .Lengths if we have to have a dynamically size changing board
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    //Console.Write($"|{j + (i * 3)}|");
-                    //Console.WriteLine(Board.GameBoard[i][j]);
-                    //Console.WriteLine(GameBoard);
                     Console.Write("|");
                     System.Console.Write(GameBoard[i, j]);
                     Console.Write("|");
@@ -38,15 +34,6 @@ namespace Lab04_TicTacToe.Classes
                 Console.WriteLine();
             }
             Console.WriteLine(); // because I like space
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    for (int j = 0; j < 3; j++)
-            //    {
-            //        Console.WriteLine(GameBoard[3, 3]);
-            //    }
-            //}
-            //Console.WriteLine(); // because I like space
         }
     }
 }
