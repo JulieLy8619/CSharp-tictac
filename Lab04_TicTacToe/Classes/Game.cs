@@ -28,9 +28,9 @@ namespace Lab04_TicTacToe.Classes
 		/// Activate the Play of the game
 		/// </summary>
 		/// <returns>Winner</returns>
-		//public Player Play()
-		//{
-
+		public Player Play()
+		{
+            return null;
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
@@ -48,7 +48,7 @@ namespace Lab04_TicTacToe.Classes
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
 
-		//}
+		}
 
 
 		/// <summary>
@@ -90,7 +90,8 @@ namespace Lab04_TicTacToe.Classes
                 int cInt = Convert.ToInt32(c);
                 // TODO:  Determine a winner has been reached. 
                 // return true if a winner has been reached. 
-                if (winners[i][0] == aInt && winners[i][1] == bInt && winners[i][2] == cInt)
+                //if (winners[i][0] == aInt && winners[i][1] == bInt && winners[i][2] == cInt)
+                if (a == b && b == c && c == a)
                 {
                     return true;
                 }

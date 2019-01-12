@@ -24,7 +24,6 @@ namespace Lab04_TicTacToe.Classes
 
             //TODO: Output the board to the console
             // I know it is a 3x3 board and will change it to .Lengths if we have to have a dynamically size changing board
-            //i think i need to add logic here for checking if a spot has an X or O 
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 1; j < 4; j++) 

@@ -34,7 +34,33 @@ namespace Lab04_TicTacToe
                     switch (userChoiceInt)
                     {
                         case 1: //Start
-                            Console.WriteLine("just for testing, in option 1");
+                            //Console.WriteLine("just for testing, in option 1");
+                            //set up players
+                            Player playerOne = new Player();
+                            Player playerTwo = new Player();
+                            
+                            //ask for name and set
+                            Console.WriteLine("What is Player 1's name? ");
+                            string playerOneName = Console.ReadLine();
+                            playerOne.Name = playerOneName;
+
+                            Console.WriteLine("What is Player 2's name? ");
+                            string playerTwoName = Console.ReadLine();
+                            playerTwo.Name = playerTwoName;
+                            
+                            //set x and o
+                            playerOne.Marker = "X";
+                            playerTwo.Marker = "O";
+
+                            //set who's turn first (player 1, if I have time I'll do a random)
+                            playerOne.IsTurn = true;
+                            playerTwo.IsTurn = false;
+
+                            Console.WriteLine($"Hello {playerOne.Name}, you are {playerOne.Marker} and it is your turn first");
+                            Console.WriteLine($"Hello {playerTwo.Name}, therefore you are   {playerTwo.Marker}");
+
+                            //call game.play
+
                             loopMenu = false; //to exit do while loop
                             break;
                         default: // exit
