@@ -60,6 +60,8 @@ namespace Lab04_TicTacToe
                             Console.WriteLine($"Hello {playerTwo.Name}, therefore you are   {playerTwo.Marker}");
 
                             //call game.play
+                            Game newGame = new Game(playerOne, playerTwo);
+                            newGame.Play();
 
                             loopMenu = false; //to exit do while loop
                             break;
