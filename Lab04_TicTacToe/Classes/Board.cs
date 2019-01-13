@@ -7,7 +7,7 @@ namespace Lab04_TicTacToe.Classes
     class Board
     {
 		/// <summary>
-		/// Tic Tac Toe Gameboard states
+		/// Tic Tac Toe Gameboard states 
 		/// </summary>
 		public string[,] GameBoard = new string[,]
 		{

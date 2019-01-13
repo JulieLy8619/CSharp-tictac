@@ -5,6 +5,10 @@ namespace Lab04_TicTacToe
 {
     public class Program //made it public so I could access it for testing
     {
+        /// <summary>
+        /// this is the main program that is the opening page to start a game or exit
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             bool loopMenu = true;

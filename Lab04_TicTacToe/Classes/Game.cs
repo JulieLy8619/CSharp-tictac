@@ -48,8 +48,6 @@ namespace Lab04_TicTacToe.Classes
              */
 
             Board.DisplayBoard();
-            //Console.WriteLine("test print thing " + Board.GameBoard);
-
             int counter = 0;
             do
             {
@@ -117,7 +115,7 @@ namespace Lab04_TicTacToe.Classes
 				Position p2 = Player.PositionForNumber(winners[i][1]);
 				Position p3 = Player.PositionForNumber(winners[i][2]);
 
-                //this returns the value in the "gameboard cell" ie at 0,0 a = 1
+                //julie: 1-11-19 this returns the value in the "gameboard cell" ie at 0,0 a = 1
 				string a = Board.GameBoard[p1.Row, p1.Column];
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];

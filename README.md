@@ -6,7 +6,8 @@ tell them any other relevant details
 
 time tracker: 
 1.11.19 9:00-11:45
-1-11-19 11:15pm-
+1-11-19 11:15pm-1:30am
+1-12-19 5:15
 -->
 
 # lab04-tictac
