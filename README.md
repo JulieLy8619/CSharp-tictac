@@ -7,7 +7,7 @@ tell them any other relevant details
 time tracker: 
 1.11.19 9:00-11:45
 1-11-19 11:15pm-1:30am
-1-12-19 5:15
+1-12-19 5:15-11:30
 -->
 
 # lab04-tictac
@@ -15,8 +15,8 @@ We were to build the Tic Tac Toe game. There are two players who are X's and O's
 
 # Solution
 
-![happypath](./images/happypath.jpg)
-![badpath](./images/badpath.jpg)
+![happypath](./images/happypath.pdf)
+![badpath](./images/badpath.pdf)
 ![testsproof](./images/testswork.JPG)
 
 ## Contributors
