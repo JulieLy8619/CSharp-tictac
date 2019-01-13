@@ -76,7 +76,8 @@ namespace lab04_tictac_unittesting
             Player player2 = new Player();
             player2.Name = "sally";
             Game testGame = new Game(player1, player2);
-            string a = testGameBoard.GameBoard[0, 0];
+            Position testPos = new Position(0,0);
+            string a = testGameBoard.GameBoard[testPos.Row, testPos.Column];
             Assert.Equal("1", a);
         }
         [Fact]
@@ -88,7 +89,8 @@ namespace lab04_tictac_unittesting
             Player player2 = new Player();
             player2.Name = "sally";
             Game testGame = new Game(player1, player2);
-            string a = testGameBoard.GameBoard[0, 0];
+            Position testPos = new Position(0, 0);
+            string a = testGameBoard.GameBoard[testPos.Row, testPos.Column];
             Assert.NotEqual("2", a);
         }
 
