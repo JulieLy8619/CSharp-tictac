@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using static Lab04_TicTacToe.Program;
+using Lab04_TicTacToe;
 using Lab04_TicTacToe.Classes;
 
 namespace lab04_tictac_unittesting
@@ -20,8 +20,55 @@ namespace lab04_tictac_unittesting
 
             Assert.False(testGame.CheckForWinner(testGameBoard));
         }
+        //would have to set up a winning board to get it to return true, don't know how to set up the winning board as a the default
+        //[Fact]
+        //public void TestWinnerNotWorks()
+        //{
+        //    Board testGameBoard = new Board();
+        //    Player player1 = new Player();
+        //    player1.Name = "bob";
+        //    Player player2 = new Player();
+        //    player2.Name = "sally";
+        //    Game testGame = new Game(player1, player2);
+
+        //    Assert.True(testGame.CheckForWinner(testGameBoard));
+        //}
+
+        //Test that there is a switch in players between turns
         [Fact]
-        public void TestWinnerNotWorks()
+        public void TestSwitchWorks()
+        {
+            Board testGameBoard = new Board();
+            Player player1 = new Player();
+            player1.Name = "bob";
+            player1.IsTurn = true;
+            Player player2 = new Player();
+            player2.Name = "sally";
+            player2.IsTurn = false;
+            Game testGame = new Game(player1, player2);
+            testGame.SwitchPlayer();
+
+            Assert.True(player2.IsTurn);
+        }
+        [Fact]
+        public void TestSwitchNotWorks()
+        {
+            Board testGameBoard = new Board();
+            Player player1 = new Player();
+            player1.Name = "bob";
+            player1.IsTurn = true;
+            Player player2 = new Player();
+            player2.Name = "sally";
+            player2.IsTurn = false;
+            Game testGame = new Game(player1, player2);
+            testGame.SwitchPlayer();
+
+            Assert.False(player1.IsTurn);
+        }
+
+        //Confirm that the position the player inputs correlates to the correct index of the array
+        [Fact]
+        public void TestPositionWorks()
         {
             Board testGameBoard = new Board();
             Player player1 = new Player();
@@ -29,45 +76,53 @@ namespace lab04_tictac_unittesting
             Player player2 = new Player();
             player2.Name = "sally";
             Game testGame = new Game(player1, player2);
-
-            Assert.True(testGame.CheckForWinner(testGameBoard));
+            string a = testGameBoard.GameBoard[0, 0];
+            Assert.Equal("1", a);
         }
-
-        //Test that there is a switch in players between turns
         [Fact]
-        public void TestSwitchWorks()
+        public void TestPositionNotWorks()
         {
-
+            Board testGameBoard = new Board();
+            Player player1 = new Player();
+            player1.Name = "bob";
+            Player player2 = new Player();
+            player2.Name = "sally";
+            Game testGame = new Game(player1, player2);
+            string a = testGameBoard.GameBoard[0, 0];
+            Assert.NotEqual("2", a);
         }
-        //[Fact]
-        //public void TestSwitchNotWorks()
-        //{
 
-        //}
+        //Julie unique testing: next player returns correct true or false
+        [Fact]
+        public void TestNextPlayerWorks()
+        {
+            Board testGameBoard = new Board();
+            Player player1 = new Player();
+            player1.Name = "bob";
+            player1.IsTurn = true;
+            Player player2 = new Player();
+            player2.Name = "sally";
+            player2.IsTurn = false;
+            Game testGame = new Game(player1, player2);
+            testGame.NextPlayer();
 
-        ////Confirm that the position the player inputs correlates to the correct index of the array
-        //[Fact]
-        //public void TestPositionWorks()
-        //{
+            Assert.Equal("bob", player1.Name);
+        }
+        [Fact]
+        public void TestNextPlayerNotWorks()
+        {
+            Board testGameBoard = new Board();
+            Player player1 = new Player();
+            player1.Name = "bob";
+            player1.IsTurn = true;
+            Player player2 = new Player();
+            player2.Name = "sally";
+            player2.IsTurn = false;
+            Game testGame = new Game(player1, player2);
+            testGame.NextPlayer();
 
-        //}
-        //[Fact]
-        //public void TestPositionNotWorks()
-        //{
-
-        //}
-
-        ////Julie unique testing
-        //[Fact]
-        //public void TestJulieWorks()
-        //{
-
-        //}
-        //[Fact]
-        //public void TestJulieNotWorks()
-        //{
-
-        //}
+            Assert.NotEqual("bob", player2.Name);
+        }
 
     }
 }
