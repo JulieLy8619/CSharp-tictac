@@ -11,11 +11,15 @@ time tracker:
 -->
 
 # lab04-tictac
+We were to build the Tic Tac Toe game
 
 # Solution
 ![happytests](./images/happypath.pdf) //console
 ![badtests](./images/badpath.pdf) //console
 ![]() //show tests work
 
+## Contributors
+
+Trey Cain helped me figure out how to do unit testing with the classes
 
 
