@@ -51,7 +51,7 @@ namespace Lab04_TicTacToe.Classes
             int counter = 0;
             do
             {
-                Console.WriteLine("# of turns: " + counter);
+                //Console.WriteLine("# of turns: " + counter);
                 if (PlayerOne.IsTurn == true)
                 {
                     PlayerOne.TakeTurn(Board);

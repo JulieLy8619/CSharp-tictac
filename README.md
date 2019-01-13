@@ -13,9 +13,9 @@ time tracker:
 # lab04-tictac
 
 # Solution
-<!-- prep for image
-![]() //console
+![happytests](./images/happypath.pdf) //console
+![badtests](./images/badpath.pdf) //console
 ![]() //show tests work
--->
+
 
 
