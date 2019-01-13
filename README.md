@@ -15,8 +15,8 @@ We were to build the Tic Tac Toe game. There are two players who are X's and O's
 
 # Solution
 
-![happypath](./images/happypath.pdf)
-![badpath](./images/badpath.pdf)
+![happypath](./images/happypath.jpg)
+![badpath](./images/badpath.jpg)
 ![testsproof](./images/testswork.JPG)
 
 ## Contributors
