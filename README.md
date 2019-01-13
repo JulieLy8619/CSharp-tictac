@@ -11,15 +11,16 @@ time tracker:
 -->
 
 # lab04-tictac
-We were to build the Tic Tac Toe game
+We were to build the Tic Tac Toe game. There are two players who are X's and O's and are trying to get 3 in a row on a 3x3 grid
 
 # Solution
-![happytests](./images/happypath.pdf) //console
-![badtests](./images/badpath.pdf) //console
-![]() //show tests work
+
+![happypath](./images/happypath.pdf)
+![badpath](./images/badpath.pdf)
+![testsproof](./images/testswork.JPG)
 
 ## Contributors
 
-Trey Cain helped me figure out how to do unit testing with the classes
+Trey Cain helped me figure out how to do unit testing with the classes (we have to add those NEW instances in the test code and you can't "global" variable them, you must create them per test')
 
 
