@@ -35,7 +35,7 @@ namespace Lab04_TicTacToe
                         Console.WriteLine("That isn't an option");
                         loopMenu = true;
                     }
-                    else //couldnt do while loop because I could enter bad entry on first entry
+                    else 
                     {
                         switch (userChoiceInt)
                         {
@@ -84,7 +84,7 @@ namespace Lab04_TicTacToe
             catch (Exception)
             {
                 Console.WriteLine("You made no entry, so I don't want to play with you anymore");
-                //since I didn't have menu as a function I can't recall it, so I have to exit
+                //since I didn't have menu as a function I can't re-call it, so I have to exit
             }
             Console.ReadLine(); //so it doesn't auto exit
         }
